@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad)" />
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" opacity="0.1" />
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <rect x="40" y="40" width="180" height="48" rx="24" fill="#10b981" />
+  <text x="130" y="71" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">AFTER</text>
+  
+  <text x="400" y="270" font-family="'Inter', sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">Smooth Pastel Velvet Interior</text>
+  <text x="400" y="310" font-family="'Inter', sans-serif" font-size="16" fill="#f1f5f9" text-anchor="middle">GC Painting &amp; Decorators — Professional Finish</text>
+</svg>

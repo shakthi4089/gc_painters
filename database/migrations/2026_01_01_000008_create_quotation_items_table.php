@@ -1,0 +1,27 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('quotation_items', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('quotation_id')->constrained()->cascadeOnDelete();
+            $table->string('item_description'); // e.g., Exterior Asian Paints Apex Dustproof Coating (25,000 sq.ft)
+            $table->string('quantity_unit')->default('sq.ft'); // sq.ft, lump sum, litres, days
+            $table->decimal('quantity', 10, 2)->default(1.00);
+            $table->decimal('unit_rate', 10, 2)->default(0.00);
+            $table->decimal('total_price', 12, 2)->default(0.00);
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('quotation_items');
+    }
+};

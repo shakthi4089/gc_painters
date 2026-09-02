@@ -44,8 +44,13 @@ RUN touch /var/www/html/database/database.sqlite
 RUN chown www-data:www-data /var/www/html/database/database.sqlite
 RUN chown www-data:www-data /var/www/html/database
 
+# Run Laravel migrations and seeders so the website has data!
+RUN DB_CONNECTION=sqlite php artisan migrate:fresh --seed --force
+RUN chown www-data:www-data /var/www/html/database/database.sqlite
+
 # Render dynamically assigns a port, so we need Apache to listen on $PORT instead of 80
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
 
-# Start Apache
-CMD ["apache2-foreground"]
+# We use a shell command to run migrations and seed the database every time the container starts, 
+# then start apache. This guarantees the tables exist even if the server restarts!
+CMD php artisan migrate:fresh --seed --force && apache2-foreground

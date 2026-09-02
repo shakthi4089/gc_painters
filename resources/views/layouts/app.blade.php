@@ -169,25 +169,25 @@
   </footer>
 
   <!-- Floating WhatsApp CTA -->
-  <a href="https://api.whatsapp.com/send/?phone={{ config('custom-app.contact.whatsapp_number') }}&text={{ urlencode(config('custom-app.contact.whatsapp_default_message')) }}&type=phone_number&app_absent=0" target="_blank" class="floating-whatsapp-btn" title="Chat on WhatsApp">
+  <a href="https://api.whatsapp.com/send/?phone={{ config('custom-app.contact.whatsapp_number') }}&text={{ urlencode(config('custom-app.contact.whatsapp_default_message')) }}&type=phone_number&app_absent=0" target="_blank" class="floating-whatsapp-btn d-none d-md-flex" title="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <!-- Mobile Sticky Bar -->
   <div class="sticky-contact-bar d-md-none">
-    <a href="tel:+918925014875" class="btn btn-primary flex-fill fw-bold rounded-pill">
+    <a href="tel:+918925014875" class="btn btn-primary btn-sm flex-fill fw-bold rounded-pill py-2">
       <i class="fa-solid fa-phone me-1"></i> Call Now
     </a>
-    <a href="https://api.whatsapp.com/send/?phone={{ config('custom-app.contact.whatsapp_number') }}&text={{ urlencode(config('custom-app.contact.whatsapp_default_message')) }}&type=phone_number&app_absent=0" target="_blank" class="btn btn-success flex-fill fw-bold rounded-pill">
+    <a href="https://api.whatsapp.com/send/?phone={{ config('custom-app.contact.whatsapp_number') }}&text={{ urlencode(config('custom-app.contact.whatsapp_default_message')) }}&type=phone_number&app_absent=0" target="_blank" class="btn btn-success btn-sm flex-fill fw-bold rounded-pill py-2">
       <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp
     </a>
-    <a href="{{ route('quote') }}" class="btn btn-warning flex-fill fw-bold rounded-pill text-dark">
+    <a href="{{ route('quote') }}" class="btn btn-warning btn-sm flex-fill fw-bold rounded-pill text-dark py-2">
       <i class="fa-solid fa-calculator me-1"></i> Quote
     </a>
   </div>
 
   <!-- Scripts -->
-  <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>

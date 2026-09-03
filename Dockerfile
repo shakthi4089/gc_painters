@@ -48,9 +48,11 @@ RUN chown www-data:www-data /var/www/html/database
 RUN DB_CONNECTION=sqlite php artisan migrate:fresh --seed --force
 RUN chown www-data:www-data /var/www/html/database/database.sqlite
 
-# Render dynamically assigns a port, so we need Apache to listen on $PORT instead of 80
-RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
+# Render dynamically assigns a port, so we need Apache to listen on $PORT instead of 80.
+# This substitution MUST happen at runtime in CMD, not during build via RUN.
 
 # We use a shell command to run migrations and seed the database every time the container starts, 
 # then start apache. Running as www-data ensures Apache can write to the SQLite file later.
-CMD su -s /bin/sh www-data -c "DB_CONNECTION=sqlite php artisan migrate:fresh --seed --force" && apache2-foreground
+CMD sed -i "s/80/${PORT:-80}/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && \
+    su -s /bin/sh www-data -c "DB_CONNECTION=sqlite php artisan migrate:fresh --seed --force" && \
+    apache2-foreground

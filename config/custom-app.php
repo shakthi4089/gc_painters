@@ -52,6 +52,13 @@ return [
     ],
 
     'contact' => [
+        'proprietor_label' => 'Proprietor',
+        'proprietor_name' => 'M. Gubendran',
+        'phone_display' => '+91 89250 14875',
+        'phone_raw' => '+918925014875',
+        'email' => 'contact@gcpainting.com',
+        'address' => 'Anna Nagar & Avadi, Chennai, Tamil Nadu',
+        'working_areas' => 'Chennai | Avadi | Ambattur | Velachery | Porur | Tambaram',
         'whatsapp_number' => '918925014875',
         'whatsapp_default_message' => 'Hi GC Painting! I want to get a free quote',
     ],

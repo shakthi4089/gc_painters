@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: color 0.2s ease;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover {
   color: #60a5fa !important;
 }
 
@@ -169,6 +169,59 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+/* Footer Style - Premium Vibrant Gradient matching Brand Aesthetics */
+.footer-custom {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+  color: #cbd5e1;
+}
+
+.footer-custom::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+
+.footer-custom h5 {
+  color: #ffffff !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.footer-custom p,
+.footer-custom span {
+  color: #94a3b8 !important;
+}
+
+.footer-custom ul li a {
+  color: #cbd5e1 !important;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-custom ul li a:hover {
+  color: #60a5fa !important;
+  transform: translateX(3px);
+}
+
+.footer-custom .social-icon {
+  color: #94a3b8;
+  font-size: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.footer-custom .social-icon:hover {
+  color: #38bdf8;
+  transform: translateY(-2px);
 }
 
 /* Interactive Before & After Slider */
@@ -307,16 +360,16 @@ h1, h2, h3, h4, h5, h6 {
 .floating-whatsapp-btn {
   position: fixed;
   bottom: 25px;
-  right: 25px;
+  left: 20px;
   background: #25d366;
   color: white;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
   z-index: 1000;
   transition: all 0.3s ease;
@@ -326,6 +379,16 @@ h1, h2, h3, h4, h5, h6 {
 .floating-whatsapp-btn:hover {
   transform: scale(1.1) rotate(8deg);
   color: white;
+}
+
+@media (max-width: 767.98px) {
+  .floating-whatsapp-btn {
+    bottom: 20px;
+    left: 15px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
 }
 
 /* Dashboard Sidebar & Admin Layout */
@@ -416,4 +479,105 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+}
+
+/* Circular Scroll Progress Button */
+.scroll-top-progress {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.15));
+}
+
+.scroll-top-progress.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-progress .progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.scroll-top-progress .progress-ring__circle {
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.scroll-top-progress .scroll-top-icon {
+  font-size: 1.1rem;
+  color: #10b981;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+
+.scroll-top-progress:hover .scroll-top-icon {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 767.98px) {
+  .scroll-top-progress {
+    bottom: 20px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  .scroll-top-progress .progress-ring {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.mobile-scroll-top:hover, .mobile-scroll-top:active {
+  background: var(--primary-blue);
+  transform: translateY(-3px) !important;
+}
+
+/* Mobile Navbar Dropdown Accordion Style */
+@media (max-width: 991.98px) {
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 5px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .navbar-nav .dropdown-item {
+    color: #cbd5e1 !important;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+  .navbar-nav .dropdown-item i {
+    opacity: 0.8;
+  }
+  .navbar-nav .dropdown-item:hover,
+  .navbar-nav .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+  }
+  .navbar-nav .dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+/* Remove focus border from hamburger menu */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
 }

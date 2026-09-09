@@ -1,9 +1,50 @@
 /* GC Painting & Decorators - Interactive JavaScript Engine */
 
 document.addEventListener('DOMContentLoaded', () => {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+  
   initBeforeAfterSliders();
   initFilterTabs();
+  initScrollToTop();
 });
+
+function initScrollToTop() {
+  const scrollBtn = document.getElementById('scrollTopProgress');
+  const progressCircle = document.querySelector('.progress-ring__circle');
+  if (!scrollBtn || !progressCircle) return;
+
+  const circumference = 119.38;
+
+  const updateScrollProgress = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (scrollTop > 150) {
+      scrollBtn.classList.add('show');
+    } else {
+      scrollBtn.classList.remove('show');
+    }
+
+    if (docHeight > 0) {
+      const scrollPercent = Math.min(Math.max(scrollTop / docHeight, 0), 1);
+      const offset = circumference - (scrollPercent * circumference);
+      progressCircle.style.strokeDashoffset = offset;
+    }
+  };
+
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
 
 function initBeforeAfterSliders() {
   const containers = document.querySelectorAll('.ba-container');

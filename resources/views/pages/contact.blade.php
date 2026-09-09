@@ -18,12 +18,12 @@
           <h2 class="h4 fw-bold mb-4 text-primary">Get In Touch</h2>
 
           <div class="d-flex gap-3 mb-4">
-            <div class="rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-              <i class="fa-solid fa-user fs-4"></i>
+            <div class="rounded-circle bg-danger bg-opacity-10 text-danger d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+              <i class="fa-solid fa-location-dot fs-4"></i>
             </div>
             <div>
-              <h5 class="fw-bold mb-1 fs-6">Proprietor</h5>
-              <p class="text-secondary mb-0">G. Chandran (Master Painter)</p>
+              <h5 class="fw-bold mb-1 fs-6">Main Service Hubs / Address</h5>
+              <p class="text-secondary mb-0">{{ config('custom-app.contact.address') }}</p>
             </div>
           </div>
 
@@ -33,17 +33,7 @@
             </div>
             <div>
               <h5 class="fw-bold mb-1 fs-6">Phone & Mobile</h5>
-              <p class="text-secondary mb-0">+91 89250 14875 / +91 99410 43220</p>
-            </div>
-          </div>
-
-          <div class="d-flex gap-3 mb-4">
-            <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-              <i class="fa-brands fa-whatsapp fs-4"></i>
-            </div>
-            <div>
-              <h5 class="fw-bold mb-1 fs-6">WhatsApp Support</h5>
-              <a href="https://wa.me/918925014875" target="_blank" class="text-success fw-bold text-decoration-none">+91 98765 43210 (Chat Now)</a>
+              <p class="text-secondary mb-0">{{ config('custom-app.contact.phone_display') }}</p>
             </div>
           </div>
 
@@ -53,17 +43,17 @@
             </div>
             <div>
               <h5 class="fw-bold mb-1 fs-6">Email Address</h5>
-              <p class="text-secondary mb-0">contact@gcpainting.com</p>
+              <p class="text-secondary mb-0">{{ config('custom-app.contact.email') }}</p>
             </div>
           </div>
 
           <div class="d-flex gap-3">
-            <div class="rounded-circle bg-danger bg-opacity-10 text-danger d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
-              <i class="fa-solid fa-location-dot fs-4"></i>
+            <div class="rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+              <i class="fa-brands fa-whatsapp fs-4"></i>
             </div>
             <div>
-              <h5 class="fw-bold mb-1 fs-6">Main Service Hubs</h5>
-              <p class="text-secondary mb-0">Anna Nagar & Avadi, Chennai, Tamil Nadu</p>
+              <h5 class="fw-bold mb-1 fs-6">WhatsApp Support</h5>
+              <a href="https://api.whatsapp.com/send/?phone={{ config('custom-app.contact.whatsapp_number') }}&text={{ urlencode(config('custom-app.contact.whatsapp_default_message')) }}" target="_blank" class="text-success fw-bold text-decoration-none">{{ config('custom-app.contact.phone_display') }} (Chat Now)</a>
             </div>
           </div>
         </div>

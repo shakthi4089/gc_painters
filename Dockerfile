@@ -30,5 +30,6 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 RUN composer install --optimize-autoloader --no-dev
 
 CMD sed -i "s/80/${PORT:-80}/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && \
+    php artisan storage:link --force && \
     php artisan migrate --force --seed && \
     apache2-foreground

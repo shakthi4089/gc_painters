@@ -3,15 +3,15 @@
 @section('title', 'About Us — GC Painting & Decorators')
 
 @section('content')
-<section class="py-5 bg-dark text-white text-center">
-  <div class="container py-4">
-    <h1 class="display-5 fw-bold">About GC Painting & Decorators</h1>
-    <p class="lead text-light opacity-75 max-w-700 mx-auto">Two Decades of Craftsmanship, Integrity & Quality Execution in Painting Across Chennai.</p>
+<section class="page-header-light text-center">
+  <div class="container py-2">
+    <h1 class="page-title">About GC Painting & Decorators</h1>
+    <p class="page-subtitle">Two Decades of Craftsmanship, Integrity & Quality Execution in Painting Across Chennai.</p>
   </div>
 </section>
 
-<section class="py-5 bg-white">
-  <div class="container py-4">
+<section class="py-4 bg-white">
+  <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
         <span class="text-primary fw-bold text-uppercase tracking-wider small">Our Journey</span>

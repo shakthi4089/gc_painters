@@ -3,17 +3,17 @@
 @section('title', 'Before & After Transformation Gallery — GC Painting')
 
 @section('content')
-<section class="py-5 bg-dark text-white text-center">
-  <div class="container py-4">
+<section class="page-header-light text-center">
+  <div class="container py-2">
     <span class="badge bg-danger rounded-pill px-3 py-2 text-uppercase mb-3"><i class="fa-solid fa-sliders me-1"></i> Interactive Comparison</span>
-    <h1 class="display-5 fw-bold">Before & After Painting Showcase</h1>
-    <p class="lead text-light opacity-75 max-w-700 mx-auto">Real transformation proofs across Chennai. Inspect our surface repair and finishing quality with visual image comparison.</p>
+    <h1 class="page-title">Before & After Painting Showcase</h1>
+    <p class="page-subtitle">Real transformation proofs across Chennai. Inspect our surface repair and finishing quality with visual image comparison.</p>
   </div>
 </section>
 
-<section class="py-5 bg-light">
-  <div class="container py-4">
-    <div class="row g-5">
+<section class="py-4 bg-light">
+  <div class="container">
+    <div class="row g-4">
       @foreach($projects as $p)
         <div class="col-lg-6">
           <div class="bg-white p-4 rounded-4 border shadow-sm h-100 d-flex flex-column justify-content-between">

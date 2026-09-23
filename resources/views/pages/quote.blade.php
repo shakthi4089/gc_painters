@@ -3,15 +3,15 @@
 @section('title', 'Request a Free Quote — GC Painting & Decorators')
 
 @section('content')
-<section class="py-5 bg-dark text-white text-center">
-  <div class="container py-4">
-    <h1 class="display-5 fw-bold">Request a Free On-Site Quote</h1>
-    <p class="lead text-light opacity-75 max-w-700 mx-auto">Fill in your property details below. Our team will inspect your site, provide color advice, and deliver a transparent estimate.</p>
+<section class="page-header-light text-center">
+  <div class="container py-2">
+    <h1 class="page-title">Request a Free On-Site Quote</h1>
+    <p class="page-subtitle">Fill in your property details below. Our team will inspect your site, provide color advice, and deliver a transparent estimate.</p>
   </div>
 </section>
 
-<section class="py-5 bg-light">
-  <div class="container py-4">
+<section class="py-4 bg-light">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="bg-white p-4 p-md-5 rounded-4 shadow border">

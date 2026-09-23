@@ -3,18 +3,18 @@
 @section('title', 'Photo Gallery — GC Painting Showcase')
 
 @section('content')
-<section class="py-5 bg-dark text-white text-center">
-  <div class="container py-4">
-    <h1 class="display-5 fw-bold">Project Photo Gallery</h1>
-    <p class="lead text-light opacity-75 max-w-700 mx-auto">Visual album of our finished exterior, interior, apartment, and industrial painting projects across Chennai.</p>
+<section class="page-header-light text-center">
+  <div class="container py-2">
+    <h1 class="page-title">Project Photo Gallery</h1>
+    <p class="page-subtitle">Visual album of our finished exterior, interior, apartment, and industrial painting projects across Chennai.</p>
   </div>
 </section>
 
-<section class="py-5 bg-light">
-  <div class="container py-4">
+<section class="py-4 bg-light">
+  <div class="container">
     
     <!-- Category Filters -->
-    <div class="d-flex flex-wrap gap-2 justify-content-center mb-5">
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
       <button class="btn btn-primary rounded-pill px-4 filter-btn active" data-filter="all">All Photos</button>
       <button class="btn btn-outline-secondary rounded-pill px-4 filter-btn" data-filter="Exterior">Exterior</button>
       <button class="btn btn-outline-secondary rounded-pill px-4 filter-btn" data-filter="Interior">Interior</button>

@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
   color: white;
-  padding: 100px 0 80px 0;
+  padding: 45px 0 40px 0;
   position: relative;
   overflow: hidden;
 }
@@ -96,21 +96,91 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(37, 99, 235, 0.2);
   border: 1px solid rgba(59, 130, 246, 0.4);
   color: #93c5fd;
-  padding: 6px 16px;
+  padding: 5px 14px;
   border-radius: 50px;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .hero-title {
-  font-size: 3.2rem;
+  font-size: 2.85rem;
   line-height: 1.15;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   background: linear-gradient(135deg, #ffffff 60%, #93c5fd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Light & Artistic Page Header / Hero Banner */
+.page-header-light {
+  background-color: #ffffff;
+  background-image: 
+    url('../images/brush-blue.png'),
+    url('../images/brush-yellow.png');
+  background-position: left -40px bottom -40px, right -30px center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 320px auto, 280px auto;
+  position: relative;
+  padding: 35px 0 25px 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 35px 0 30px 0;
+  }
+  .page-header-light {
+    background-size: 220px auto, 190px auto;
+    background-position: left -30px bottom -20px, right -20px center;
+    padding: 30px 0 22px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 28px 0 24px 0;
+  }
+  .page-header-light {
+    background-size: 150px auto, 130px auto;
+    background-position: left -25px bottom -10px, right -15px center;
+    padding: 24px 0 18px 0;
+  }
+}
+
+.page-header-light .page-title {
+  color: #0f2b5c;
+  font-weight: 800;
+  font-size: 2.85rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .page-header-light .page-title {
+    font-size: 2.1rem;
+  }
+}
+
+.page-header-light .page-subtitle {
+  color: #475569;
+  font-size: 1.15rem;
+  font-weight: 400;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Home Before & After Section - Modern Light & Bright Aesthetic */
+.ba-section-light {
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 50%, #fefce8 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 /* Service & Project Cards */
@@ -546,10 +616,48 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-3px) !important;
 }
 
+/* Desktop Navbar Dropdown on Hover & Caret Removal */
+.navbar-nav .dropdown-toggle::after,
+.navbar-nav .nav-link::after {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-item.dropdown {
+    position: relative;
+    padding-bottom: 6px;
+    margin-bottom: -6px;
+  }
+
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    display: block !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    margin-top: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    pointer-events: none;
+    background: #ffffff;
+    min-width: 250px;
+  }
+
+  .navbar-nav .nav-item.dropdown:hover > .dropdown-menu,
+  .navbar-nav .nav-item.dropdown .dropdown-menu:hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+  }
+}
+
 /* Mobile Navbar Dropdown Accordion Style */
 @media (max-width: 991.98px) {
   .navbar-nav .dropdown-menu {
     position: static !important;
+    display: block !important;
     background-color: rgba(255, 255, 255, 0.05) !important;
     border: none !important;
     box-shadow: none !important;

@@ -5,8 +5,8 @@
 @section('content')
 
 <!-- Project Banner Header -->
-<section class="py-5 bg-dark text-white">
-  <div class="container py-3">
+<section class="page-header-light">
+  <div class="container py-2">
     <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
       <span class="badge bg-primary rounded-pill px-3 py-1">{{ $project->property_type }}</span>
       <span class="badge {{ $project->status == 'Completed' ? 'bg-success' : 'bg-warning text-dark' }} rounded-pill px-3 py-1 fw-bold">
@@ -17,9 +17,9 @@
       @endif
     </div>
 
-    <h1 class="display-5 fw-bold mb-3">{{ $project->title }}</h1>
+    <h1 class="page-title mb-3">{{ $project->title }}</h1>
     
-    <div class="d-flex flex-wrap gap-4 text-light opacity-90 fs-6">
+    <div class="d-flex flex-wrap gap-4 text-secondary fs-6">
       <div><i class="fa-solid fa-location-dot text-danger me-2"></i> <strong>Location:</strong> {{ $project->location }}</div>
       <div><i class="fa-solid fa-building text-info me-2"></i> <strong>Property Type:</strong> {{ $project->property_type }}</div>
       <div><i class="fa-solid fa-calendar text-warning me-2"></i> <strong>Completed:</strong> {{ $project->year_completed ?? '2026' }}</div>
@@ -30,8 +30,8 @@
 </section>
 
 <!-- Main Detail Content -->
-<section class="py-5 bg-white">
-  <div class="container py-3">
+<section class="py-4 bg-white">
+  <div class="container">
     <div class="row g-5">
       <div class="col-lg-8">
 

@@ -3,13 +3,13 @@
 @section('title', $service->title . ' — GC Painting Services')
 
 @section('content')
-<section class="py-5 bg-dark text-white">
-  <div class="container py-4">
+<section class="page-header-light">
+  <div class="container py-2">
     <div class="row align-items-center g-4">
       <div class="col-lg-7">
         <span class="badge bg-primary rounded-pill px-3 py-2 text-uppercase mb-3">{{ $service->category }}</span>
-        <h1 class="display-5 fw-bold mb-3">{{ $service->title }}</h1>
-        <p class="lead text-light opacity-75 mb-4">{{ $service->subtitle }}</p>
+        <h1 class="page-title mb-3">{{ $service->title }}</h1>
+        <p class="page-subtitle mb-4 text-start ms-0">{{ $service->subtitle }}</p>
         <div class="d-flex flex-wrap gap-3">
           <a href="{{ route('quote') }}" class="btn btn-warning btn-lg rounded-pill px-4 fw-bold text-dark">
             <i class="fa-solid fa-calculator me-2"></i> Get Quote for {{ $service->title }}
@@ -20,14 +20,14 @@
         </div>
       </div>
       <div class="col-lg-5">
-        <img src="{{ asset($service->cover_image) }}" class="w-100 rounded-4 shadow-lg border border-secondary border-opacity-25" alt="{{ $service->title }}">
+        <img src="{{ asset($service->cover_image) }}" class="w-100 rounded-4 shadow border" alt="{{ $service->title }}">
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-5 bg-white">
-  <div class="container py-4">
+<section class="py-4 bg-white">
+  <div class="container">
     <div class="row g-5">
       <div class="col-lg-8">
         <h2 class="h3 fw-bold mb-4">Service Overview</h2>

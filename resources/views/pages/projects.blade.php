@@ -3,18 +3,18 @@
 @section('title', 'Our Projects — Completed & Active Portfolio')
 
 @section('content')
-<section class="py-5 bg-dark text-white text-center">
-  <div class="container py-4">
-    <h1 class="display-5 fw-bold">Our Completed & Active Projects</h1>
-    <p class="lead text-light opacity-75 max-w-700 mx-auto">Explore real-world painting transformations handled from initial site survey to complete handover.</p>
+<section class="page-header-light text-center">
+  <div class="container py-2">
+    <h1 class="page-title">Our Completed & Active Projects</h1>
+    <p class="page-subtitle">Explore real-world painting transformations handled from initial site survey to complete handover.</p>
   </div>
 </section>
 
-<section class="py-5 bg-light">
-  <div class="container py-4">
+<section class="py-4 bg-light">
+  <div class="container">
     
     <!-- Category Filter Bar -->
-    <div class="d-flex flex-wrap gap-2 justify-content-center mb-5">
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
       <button class="btn btn-primary rounded-pill px-4 filter-btn active" data-filter="all">All Projects</button>
       <button class="btn btn-outline-secondary rounded-pill px-4 filter-btn" data-filter="House">House & Villa</button>
       <button class="btn btn-outline-secondary rounded-pill px-4 filter-btn" data-filter="Apartment">Apartment Complex</button>

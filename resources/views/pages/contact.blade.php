@@ -3,15 +3,15 @@
 @section('title', 'Contact Us — GC Painting & Decorators')
 
 @section('content')
-<section class="py-5 bg-dark text-white text-center">
-  <div class="container py-4">
-    <h1 class="display-5 fw-bold">Contact GC Painting & Decorators</h1>
-    <p class="lead text-light opacity-75 max-w-700 mx-auto">Get in touch directly with Master Painter G. Chandran for site visits, estimates, or project consultations.</p>
+<section class="page-header-light text-center">
+  <div class="container py-2">
+    <h1 class="page-title">Contact GC Painting & Decorators</h1>
+    <p class="page-subtitle">Get in touch directly with Master Painter G. Chandran for site visits, estimates, or project consultations.</p>
   </div>
 </section>
 
-<section class="py-5 bg-light">
-  <div class="container py-4">
+<section class="py-4 bg-light">
+  <div class="container">
     <div class="row g-5">
       <div class="col-lg-5">
         <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border h-100">

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <defs>
+    <linearGradient id="blueGrad1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#93c5fd" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#dbeafe" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="blueGrad2" x1="0%" y1="80%" x2="90%" y2="10%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#bfdbfe" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="blueGrad3" x1="0%" y1="100%" x2="70%" y2="20%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.35" />
+      <stop offset="70%" stop-color="#60a5fa" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#e0f2fe" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Large Soft Base Wash -->
+  <path d="M-50 450 C 40 380, 100 350, 180 320 C 260 290, 320 220, 350 180 C 370 150, 310 130, 240 180 C 180 220, 110 270, 40 320 C -20 360, -50 400, -50 450 Z" fill="url(#blueGrad1)" />
+
+  <!-- Diagonal Main Brush Stroke -->
+  <path d="M-30 420 Q 80 320, 210 240 T 380 150 C 410 130, 390 110, 340 130 Q 180 200, 60 290 Q -10 350, -30 420 Z" fill="url(#blueGrad2)" />
+
+  <!-- Bristle Detail Strokes -->
+  <path d="M-10 390 Q 70 300, 240 210 Q 330 165, 360 140 Q 300 160, 180 230 Q 50 310, -10 390 Z" fill="url(#blueGrad3)" />
+  <path d="M-40 360 Q 50 280, 190 200 Q 280 150, 310 130 Q 250 160, 130 230 Q 20 300, -40 360 Z" fill="url(#blueGrad1)" opacity="0.8" />
+  <path d="M-20 440 Q 120 340, 280 250 Q 390 180, 430 140 Q 370 170, 230 260 Q 90 350, -20 440 Z" fill="url(#blueGrad2)" opacity="0.6" />
+
+  <!-- Feathered Edge Splashes -->
+  <path d="M-60 400 C 20 330, 150 270, 260 210 C 275 200, 260 190, 235 200 C 130 250, 10 320, -60 400 Z" fill="#93c5fd" opacity="0.4" />
+  <path d="M-10 420 C 60 360, 170 300, 290 230 C 310 220, 295 210, 270 220 C 160 280, 50 350, -10 420 Z" fill="#38bdf8" opacity="0.3" />
+  <path d="M10 400 C 80 340, 180 280, 320 200 C 340 190, 325 180, 300 190 C 170 260, 70 330, 10 400 Z" fill="#60a5fa" opacity="0.25" />
+
+  <!-- Light Texture Flecks -->
+  <circle cx="280" cy="180" r="4" fill="#38bdf8" opacity="0.3" />
+  <circle cx="330" cy="150" r="3" fill="#60a5fa" opacity="0.25" />
+  <circle cx="220" cy="220" r="5" fill="#93c5fd" opacity="0.35" />
+  <circle cx="150" cy="270" r="6" fill="#38bdf8" opacity="0.2" />
+</svg>

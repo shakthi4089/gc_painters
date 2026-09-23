@@ -73,9 +73,9 @@
 </section>
 
 <!-- Live Key Business Stats -->
-<section class="py-4 bg-white border-bottom shadow-sm">
+<section class="py-3 bg-white border-bottom shadow-sm">
   <div class="container">
-    <div class="row text-center g-4">
+    <div class="row text-center g-3">
       <div class="col-6 col-md-3">
         <div class="display-5 fw-extrabold text-primary">{{ $stats['experience'] }}</div>
         <div class="text-secondary fw-semibold small text-uppercase tracking-wider">Years Experience</div>
@@ -97,12 +97,12 @@
 </section>
 
 <!-- Services Grid Section -->
-<section class="py-5 bg-light">
-  <div class="container py-4">
-    <div class="text-center max-w-700 mx-auto mb-5">
+<section class="py-4 bg-light">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-4">
       <span class="text-primary fw-bold text-uppercase tracking-wider small">What We Do</span>
       <h2 class="display-6 fw-bold mt-1">Our Professional Painting Services</h2>
-      <p class="text-secondary">Tailored execution for every property type — executed with dust-free sanding and weather-proof guarantees.</p>
+      <p class="text-secondary mb-0">Tailored execution for every property type — executed with dust-free sanding and weather-proof guarantees.</p>
     </div>
 
     <div class="row g-4">
@@ -137,15 +137,15 @@
 </section>
 
 <!-- Interactive Before & After Transformation Section -->
-<section class="py-5 bg-dark text-white">
-  <div class="container py-4">
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+<section class="py-4 ba-section-light">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
       <div>
         <span class="badge bg-danger rounded-pill px-3 py-1 mb-2">REAL RESULTS</span>
-        <h2 class="display-6 fw-bold text-white mb-0">Before & After Visual Transformations</h2>
+        <h2 class="display-6 fw-bold text-dark mb-0" style="color: #0f2b5c !important;">Before & After Visual Transformations</h2>
         <p class="text-secondary mb-0 mt-2">Watch the interactive comparison to see how we turn weathered walls into modern masterpieces.</p>
       </div>
-      <a href="{{ route('before-after') }}" class="btn btn-outline-light rounded-pill mt-3 mt-md-0 fw-semibold">
+      <a href="{{ route('before-after') }}" class="btn btn-outline-primary rounded-pill mt-3 mt-md-0 fw-semibold">
         View All Before & After Cases &rarr;
       </a>
     </div>
@@ -153,7 +153,7 @@
     <div class="row g-4">
       @foreach($beforeAfterProjects as $p)
         <div class="col-md-6">
-          <div class="bg-secondary bg-opacity-10 p-3 rounded-4 border border-secondary border-opacity-25">
+          <div class="bg-white p-3 p-md-4 rounded-4 shadow-sm border">
             <div class="ba-container mb-3">
               <img src="{{ asset($p->after_image) }}" class="ba-image-after" alt="{{ $p->title }} After">
               <div class="ba-image-before-wrapper">
@@ -165,7 +165,7 @@
             </div>
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <h4 class="h6 fw-bold text-white mb-1">{{ $p->title }}</h4>
+                <h4 class="h6 fw-bold text-dark mb-1">{{ $p->title }}</h4>
                 <div class="small text-secondary"><i class="fa-solid fa-location-dot me-1 text-danger"></i> {{ $p->location }} &bull; {{ $p->area_sqft }}</div>
               </div>
               <a href="{{ route('projects.detail', $p->slug) }}" class="btn btn-sm btn-primary rounded-pill px-3">
@@ -180,9 +180,9 @@
 </section>
 
 <!-- Featured Projects Section -->
-<section class="py-5 bg-light">
-  <div class="container py-4">
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+<section class="py-4 bg-light">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
       <div>
         <span class="text-primary fw-bold text-uppercase tracking-wider small">Our Portfolio</span>
         <h2 class="display-6 fw-bold mt-1">Completed & Active Projects</h2>
@@ -239,12 +239,12 @@
 </section>
 
 <!-- Why Choose Us -->
-<section class="py-5 bg-white border-top">
-  <div class="container py-4">
-    <div class="text-center max-w-700 mx-auto mb-5">
+<section class="py-4 bg-white border-top">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-4">
       <span class="text-primary fw-bold text-uppercase tracking-wider small">The GC Advantage</span>
       <h2 class="display-6 fw-bold mt-1">Why Homeowners & Businesses Choose Us</h2>
-      <p class="text-secondary">Over two decades of building trust with quality paints and transparent execution.</p>
+      <p class="text-secondary mb-0">Over two decades of building trust with quality paints and transparent execution.</p>
     </div>
 
     <div class="row g-4 text-center">
@@ -282,9 +282,9 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="py-5 bg-light">
-  <div class="container py-4">
-    <div class="text-center max-w-700 mx-auto mb-5">
+<section class="py-4 bg-light">
+  <div class="container">
+    <div class="text-center max-w-700 mx-auto mb-4">
       <span class="text-primary fw-bold text-uppercase tracking-wider small">Testimonials</span>
       <h2 class="display-6 fw-bold mt-1">What Our Clients Say</h2>
     </div>
@@ -316,8 +316,8 @@
 </section>
 
 <!-- Quick Quote CTA Banner -->
-<section class="py-5 bg-primary text-white position-relative overflow-hidden">
-  <div class="container position-relative z-1 py-3">
+<section class="py-4 bg-primary text-white position-relative overflow-hidden">
+  <div class="container position-relative z-1 py-2">
     <div class="row align-items-center">
       <div class="col-lg-8">
         <h2 class="display-6 fw-bold mb-2">Ready to Give Your Property a Fresh New Look?</h2>

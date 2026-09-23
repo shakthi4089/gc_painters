@@ -3,15 +3,15 @@
 @section('title', 'Painting Services — GC Painting')
 
 @section('content')
-<section class="py-5 bg-dark text-white text-center">
-  <div class="container py-4">
-    <h1 class="display-5 fw-bold">Our Painting Services</h1>
-    <p class="lead text-light opacity-75 max-w-700 mx-auto">Comprehensive Painting & Surface Coating Solutions for Every Property Type across Chennai.</p>
+<section class="page-header-light text-center">
+  <div class="container py-2">
+    <h1 class="page-title">Our Painting Services</h1>
+    <p class="page-subtitle">Comprehensive Painting & Surface Coating Solutions for Every Property Type across Chennai.</p>
   </div>
 </section>
 
-<section class="py-5 bg-light">
-  <div class="container py-4">
+<section class="py-4 bg-light">
+  <div class="container">
     <div class="row g-4">
       @foreach($services as $service)
         <div class="col-md-6 col-lg-4">

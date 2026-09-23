@@ -56,8 +56,8 @@
           <li class="nav-item"><a class="nav-link py-1 px-2 text-nowrap {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a></li>
           <li class="nav-item"><a class="nav-link py-1 px-2 text-nowrap {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">About Us</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link py-1 px-2 text-nowrap dropdown-toggle {{ request()->routeIs('services*') ? 'active' : '' }}" href="{{ route('services') }}" data-bs-toggle="dropdown">Services</a>
-            <ul class="dropdown-menu shadow border-0 rounded-3 mt-2">
+            <a class="nav-link py-1 px-2 text-nowrap {{ request()->routeIs('services*') ? 'active' : '' }}" href="{{ route('services') }}">Services</a>
+            <ul class="dropdown-menu shadow border-0 rounded-3">
               <li><a class="dropdown-item py-2 fw-medium" href="{{ route('services.detail', 'residential-painting') }}"><i class="fa-solid fa-house text-primary me-2"></i>Residential Painting</a></li>
               <li><a class="dropdown-item py-2 fw-medium" href="{{ route('services.detail', 'apartment-painting') }}"><i class="fa-solid fa-building text-info me-2"></i>Apartment Painting</a></li>
               <li><a class="dropdown-item py-2 fw-medium" href="{{ route('services.detail', 'commercial-painting') }}"><i class="fa-solid fa-briefcase text-warning me-2"></i>Commercial Painting</a></li>
